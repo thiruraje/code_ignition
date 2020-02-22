@@ -24,7 +24,7 @@ class TeamListController extends Controller
                     '<a href="{{ action(\'AdminController\TeamListController@show\',[$id]) }}" class="btn btn-md"><i class="fa fa-eye"></i></a>
                     <a href="{{ action(\'AdminController\TeamListController@edit\',[$id]) }}" class="btn btn-md" ><i class="fa fa-edit"></i></a>
                     <a href="{{ action(\'AdminController\TeamListController@destroy\',[$id]) }}" class="btn btn-md Delete" data-toggle="tooltip" data-placement="right" DeleteMessage="Delete Vehicle"><i class="fa fa-trash"></i></i></a>
-                    <a href="" class="btn btn-primary" data-toggle="tooltip" data-placement="right" DeleteMessage="Delete Vehicle">Add</a>'
+                    <a href="" class="btn btn-primary" data-toggle="tooltip" >Add</a>'
                 )
                 ->rawColumns(['action'])->make(true);
         }
@@ -41,30 +41,31 @@ class TeamListController extends Controller
         return view('admin.Teams.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
+    /** * Store a newly created resource in storage. * * @param 
+\Illuminate\Http\Request  $request * @return \Illuminate\Http\Response */
+    public function store(Request $request){ 
         $this->validate(request(),[
-            'team_name' => 'required',
-            'member[]' => 'required',
-            'roll_num[]' => 'required',
-            'department[]' => 'required',
-            'year[]' => 'required',
-        ]);
-        // return request('department');
-         try {
-            $team_name=new Teamname;
-            $team_name->team_name=request('team_name');
-            $team_name->save();
+            'team_name'=>'required',
+            'member.0'=>'required',
+            'roll_num.0'=>'required', 
+            'department.0'=>'required', 
+        ]); 
+        try{ 
+            $Teamname=new Teamname; 
+            $Teamname->team_name=request('team_name');
+            $Teamname->save();
 
-
-
-
+            foreach (request('member') as $key => $value) {
+                if (!empty(request('member')[$key]) && !empty(request('roll_num')[$key])) {
+                    $Team = new Team;
+                    $Team->team_id = $Teamname->id;
+                    $Team->member_name = request('member')[$key];
+                    $Team->roll_num = request('roll_num')[$key];
+                    $Team->department = request('department')[$key];
+                    $Team->year = request('year')[$key];
+                    $Team->save();
+                }
+            }
             return back()->with('success',['Team','Added Successfully!']);
         }catch (Exception $e){
             return back()->with('danger','Something went wrong!');

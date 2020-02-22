@@ -34,12 +34,13 @@
                                         </div>
                                     </div>
                                 </div><br>
+                                @for($i=1;$i<=4;$i++)
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <div class="col-sm-12">
                                                 <label>Member </label>
-                                                <input type="text" class="form-control" placeholder="member 1" name="member[]" id="password">
+                                                <input type="text" class="form-control" placeholder="member {{ $i }}" name="member[]" id="password">
                                             </div>
                                         </div>
                                     </div>
@@ -47,7 +48,7 @@
                                         <div class="form-group">
                                             <div class="col-sm-12">
                                                 <label>Roll Number</label>
-                                                <input type="number" class="form-control" placeholder="Roll Num"  name="roll_num[]" id="mobile">
+                                                <input type="number" class="form-control" placeholder="Roll Number"  name="roll_num[]" id="mobile">
                                             </div>
                                         </div>
                                     </div>
@@ -57,11 +58,11 @@
                                                 <label>Department</label>
                                                 <select id="department" name="department[]"class="form-control">
 												  <option value="">Select Department</option>
-												  <option value="cse">cse</option>
-												  <option value="ece">ece</option>
-												  <option value="mech">mech</option>
-												  <option value="civil">civil</option>
-												  <option value="Agri">Agri</option>
+												  <option value="cse">CSE</option>
+												  <option value="ece">ECE</option>
+												  <option value="mech">Mech</option>
+												  <option value="civil">Civil</option>
+												  <option value="agri">Agri</option>
 												</select>
                                             </div>
                                         </div>
@@ -72,141 +73,18 @@
                                                 <label>Year</label>
                                                 <select id="department"  name="year[]"class="form-control">
 												  <option value="">Select Year</option>
-												  <option value="1 st">1 st</option>
-												  <option value="2 st">2 st</option>
-												  <option value="3 st">3 st</option>
+												  <option value="1">I st</option>
+												  <option value="2">II nd</option>
+												  <option value="3">III rd</option>
 												</select>
                                             </div>
                                         </div>
                                     </div>
                                 </div><br>
+                                @endfor
+                                
                                
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <div class="col-sm-12">
-                                                <input type="text" class="form-control" placeholder="member 2" name="member[]" id="password">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <div class="col-sm-12">
-                                                <input type="number" class="form-control"  placeholder="Roll Num" name="roll_num[]" id="mobile">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <div class="col-sm-12">
-                                                <select id="department" name="department[]"class="form-control">
-												  <option value="">Select Department</option>
-												  <option value="cse">cse</option>
-												  <option value="ece">ece</option>
-												  <option value="mech">mech</option>
-												  <option value="civil">civil</option>
-												  <option value="Agri">Agri</option>
-												</select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <div class="col-sm-12">
-                                                <select id="department" name="year[]"class="form-control">
-												  <option value="">Select Year</option>
-												  <option value="1 st">1 st</option>
-												  <option value="2 st">2 st</option>
-												  <option value="3 st">3 st</option>
-												</select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><br>
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <div class="col-sm-12">
-                                                <input type="text" class="form-control" placeholder="member 3" name="member[]" id="password">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <div class="col-sm-12">
-                                                <input type="number" class="form-control" placeholder="Roll Num" name="roll_num[]" id="mobile">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <div class="col-sm-12">
-                                                <select id="department" name="department[]"class="form-control">
-												  <option value="">Select Department</option>
-												  <option value="cse">cse</option>
-												  <option value="ece">ece</option>
-												  <option value="mech">mech</option>
-												  <option value="civil">civil</option>
-												  <option value="Agri">Agri</option>
-												</select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <div class="col-sm-12">
-                                                <select id="department" name="year[]"class="form-control">
-												  <option value="">Select Year</option>
-												  <option value="1 st">1 st</option>
-												  <option value="2 st">2 st</option>
-												  <option value="3 st">3 st</option>
-												</select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><br>
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <div class="col-sm-12">
-                                                <input type="text" class="form-control" placeholder="member 4"  name="member[]" id="password">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <div class="col-sm-12">
-                                                <input type="number" class="form-control" placeholder="Roll Num" name="roll_num[]" id="mobile">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <div class="col-sm-12">
-                                                <select id="department"name="department[]" class="form-control">
-												  <option value="">Select Department</option>
-												  <option value="cse">cse</option>
-												  <option value="ece">ece</option>
-												  <option value="mech">mech</option>
-												  <option value="civil">civil</option>
-												  <option value="Agri">Agri</option>
-												</select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <div class="col-sm-12">
-                                                <select id="department" name="year[]"class="form-control">
-												  <option value="">Select Year</option>
-												  <option value="1 st">1 st</option>
-												  <option value="2 st">2 st</option>
-												  <option value="3 st">3 st</option>
-												</select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><br><br>
+                        
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="form-group">
