@@ -9,7 +9,7 @@
             <!-- Content -->
                 <main id="js-page-content" role="main" class="page-content">
                         
-                        @includeIf('errors')
+                        @include('errors')
                         @yield('content')
                 </main>
             <!-- End Content -->
@@ -17,5 +17,6 @@
 			@include('admin.layout.footer')
         <!-- End Footer -->
         </div>
+
     </body>
 </html>

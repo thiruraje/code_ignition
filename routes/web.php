@@ -11,11 +11,12 @@
 |
 */
 
-Route::resource('/user-register', 'ParticipantController\TeamController');
+Route::resource('/team-register', 'ParticipantController\TeamController');
 Route::get('/', function () {
     return view('user-register');
 });
 
+Route::get('mail', 'ParticipantController\TeamController@mail');
 
 
 // Route::get('/home', function () {

@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Http\Controllers\ParticipantController;
+use Illuminate\Contracts\Mail\Mailer;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Team;
 use App\Teamname;
-
+use Mail;
 class TeamController extends Controller
 {
     /**
@@ -38,8 +39,16 @@ class TeamController extends Controller
          $this->validate(request(),[
             'team_name'=>'required',
             'member.0'=>'required',
+            'email.0'=>'required',
             'roll_num.0'=>'required', 
             'department.0'=>'required', 
+            'year.0'=>'required', 
+        ],[
+            'member.0.required'=>'First Team Member Name is Needed',
+            'roll_num.0.required'=>'First Roll Number is Needed',
+            'email.0.required'=>'First Email is Needed',
+            'department.0.required'=>'First Team Member Name is Needed',
+            'year.0.required'=>'First Team Member Name is Needed',
         ]); 
         try{ 
             $Teamname=new Teamname; 
@@ -52,12 +61,13 @@ class TeamController extends Controller
                     $Team->team_id = $Teamname->id;
                     $Team->member_name = request('member')[$key];
                     $Team->roll_num = request('roll_num')[$key];
+                    $Team->email = request('email')[$key];
                     $Team->department = request('department')[$key];
                     $Team->year = request('year')[$key];
                     $Team->save();
                 }
             }
-            return back()->with('success',['Team','Added Successfully!']);
+            return back()->with('success',['Team','Registered Successfully!']);
         }catch (Exception $e){
             return back()->with('danger','Something went wrong!');
         }
@@ -106,5 +116,17 @@ class TeamController extends Controller
     public function destroy($id)
     {
         //
+    } 
+
+    public function mail()
+    {
+        $data = array('name'=>"Test Name");  
+        Mail::send('email',["data"=>$data], function($message) { 
+        $message->from('vklthiru2000@gmail.com','Sender');//mail=>to create view file where data to send data to view file  
+        $message->to('thiruscholar@gmail.com', 'Thiru')->subject('Welcome To Cloudstar'); //To Sender mail id  $message->from('SenderMail@gmail.com','Sender //From Mail id  
+        });   
+        echo "Email Sent. Check your inbox.";  
     }
+
+
 }

@@ -19,6 +19,7 @@ class CreateTeamsTable extends Migration
             $table->foreign('team_id')->references('id')->on('teamnames');
             $table->string('member_name');
             $table->string('roll_num');
+            $table->string('email')->unique();
             $table->string('department');
             $table->string('year');
             $table->timestamps();

@@ -10,7 +10,7 @@
 
   <!-- Favicons -->
   <link href="{{url('img/fav.png')}}" rel="icon">
-  <link href="{{url('img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+  <link href="{{url('img/fav.png')}}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
@@ -66,9 +66,8 @@
     <div class="intro-container wow fadeIn">
       <h1 class="mb-4 pb-0">Welcome <br>to<br><span>Code Ignition</span> </h1>
       <p class="mb-4 pb-0" style="font-family: sans-serif;">Feb 28, Common Computing Lab, 3rd Floor</p>
-      <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
-        data-autoplay="true"></a>
-      <a href="#about" class="about-btn scrollto">Rules of Code Ignition</a>
+      <br>
+      <a href="#about" class="about-btn scrollto">About of Code Ignition</a>
       <a href="{{ action('ParticipantController\TeamController@create') }}" class="about-btn scrollto"  data-target="#buy-ticket-modal" data-ticket-type="standard-access">Register</a>
     </div>
   </section>
@@ -82,8 +81,9 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <h2>Rules of Code Ignition</h2>
-            <p># First round based on - PUZZLE.<br># Second round based on - Fully Technical(Problem Solving and Solution Finding).<br># Opt the Realtime Problem by Own/Given.</p>
+            <h2>About of Code Ignition</h2>
+            <p>Code Ignition is an event where you can showcase your skills and compete with others to find the best.<br>It is not just about the competitions and also an event where you can learn more and gain knowledge , also be an inspired.</p>
+            <p>Code Ignition has multiple rounds.<br># PUZZLE<br># Fully Technical(Problem Solving and Solution Finding)<br>#</p>
           </div>
           <div class="col-lg-3">
             <h3>Where</h3>

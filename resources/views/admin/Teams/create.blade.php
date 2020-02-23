@@ -36,11 +36,19 @@
                                 </div><br>
                                 @for($i=1;$i<=4;$i++)
                                 <div class="row">
-                                    <div class="col-sm-3">
+                                    <div class="col-sm-2">
                                         <div class="form-group">
                                             <div class="col-sm-12">
                                                 <label>Member </label>
                                                 <input type="text" class="form-control" placeholder="member {{ $i }}" name="member[]" id="password">
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <div class="col-sm-12">
+                                                <label>Email</label>
+                                                <input type="email" class="form-control" placeholder="Email"  name="email[]" >
                                             </div>
                                         </div>
                                     </div>
@@ -52,7 +60,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-3">
+                                    <div class="col-sm-2">
                                         <div class="form-group">
                                             <div class="col-sm-12">
                                                 <label>Department</label>
@@ -67,7 +75,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-3">
+                                    <div class="col-sm-2">
                                         <div class="form-group">
                                             <div class="col-sm-12">
                                                 <label>Year</label>

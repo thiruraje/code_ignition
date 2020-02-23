@@ -23,4 +23,5 @@
     
     </body>
     @yield('script')
+    @include('errors')
 </html>

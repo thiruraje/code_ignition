@@ -50,9 +50,17 @@ class TeamListController extends Controller
         $this->validate(request(),[
             'team_name'=>'required',
             'member.0'=>'required',
+            'email.0'=>'required',
             'roll_num.0'=>'required', 
             'department.0'=>'required', 
-        ]); 
+            'year.0'=>'required', 
+        ],[
+            'member.0.required'=>'First Team Member Name is Needed',
+            'roll_num.0.required'=>'First Roll Number is Needed',
+            'email.0.required'=>'First Email is Needed',
+            'department.0.required'=>'First Team Member Name is Needed',
+            'year.0.required'=>'First Team Member Name is Needed',
+        ]);
         try{ 
             $Teamname=new Teamname; 
             $Teamname->team_name=request('team_name');
@@ -63,6 +71,7 @@ class TeamListController extends Controller
                     $Team = new Team;
                     $Team->team_id = $Teamname->id;
                     $Team->member_name = request('member')[$key];
+                    $Team->email = request('email')[$key];
                     $Team->roll_num = request('roll_num')[$key];
                     $Team->department = request('department')[$key];
                     $Team->year = request('year')[$key];
