@@ -14,7 +14,7 @@
         <div class="panel">
             <div class="panel-hdr">
                 <h1>
-                    {{$Team_name}}
+                    {{ $Team_name->team_name }}
                 </h1>
                
             </div>
@@ -30,21 +30,18 @@
                     </thead>
                     <tbody>
                     	@foreach($Team_details as $Team_detail)
-                    	<tr>
-                    		
-            			 	<td>{{ $Team_detail->member_name }}</td>
-                            <td>{{ $Team_detail->roll_num }}</td>
-                            <td>{{ $Team_detail->department }}</td>
-                            <td>{{ $Team_detail->year }}</td>
-                    	
-                    	</tr>
-
+                        	<tr>
+                        		
+                			 	<td>{{ $Team_detail->member_name }}</td>
+                                <td>{{ $Team_detail->roll_num }}</td>
+                                <td>{{ ucfirst($Team_detail->department) }}</td>
+                                <td>{{ integerToRoman($Team_detail->year) }}</td>
+                        	</tr>
             			@endforeach 
-                      
                     </tbody>
                 </table>
             @else
-	            <blockquote><p>Vehicle Type Didn't added!!</p></blockquote>
+	            <blockquote><p>No Members For Team added!!</p></blockquote>
 	        @endif
            
         </div>

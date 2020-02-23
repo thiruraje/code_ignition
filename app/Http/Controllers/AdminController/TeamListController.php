@@ -20,6 +20,10 @@ class TeamListController extends Controller
         if(request()->ajax()){
            $teams =  Teamname::get();
             return DataTables::of($teams)
+                ->addColumn('team_leader',function($team){
+                    $TeamMember = $team->Team;
+                    return $TeamMember->member_name.' ( '.ucfirst($TeamMember->department).' - '.integerToRoman($TeamMember->year).' ) ';
+                })
               ->addColumn('action',
                     '<a href="{{ action(\'AdminController\TeamListController@show\',[$id]) }}" class="btn btn-md"><i class="fa fa-eye"></i></a>
                     <a href="{{ action(\'AdminController\TeamListController@edit\',[$id]) }}" class="btn btn-md" ><i class="fa fa-edit"></i></a>
@@ -41,8 +45,7 @@ class TeamListController extends Controller
         return view('admin.Teams.create');
     }
 
-    /** * Store a newly created resource in storage. * * @param 
-\Illuminate\Http\Request  $request * @return \Illuminate\Http\Response */
+
     public function store(Request $request){ 
         $this->validate(request(),[
             'team_name'=>'required',
@@ -80,7 +83,7 @@ class TeamListController extends Controller
      */
     public function show($id)
     {
-        $Data['Team_name']=Teamname::where([['id',$id]])->get()->pluck('team_name');
+        $Data['Team_name']=Teamname::findorfail($id);
         $Data['Team_details']=Team::where([['team_id',$id]])->get();
         return view('admin.Teams.view',$Data);
     }
@@ -93,7 +96,9 @@ class TeamListController extends Controller
      */
     public function edit($id)
     {
-        //
+        $Data['TeamName']=Teamname::findorfail($id);
+        $Data['TeamDetails']=Team::where([['team_id',$id]])->get();
+        return view('admin.Teams.edit',$Data);
     }
 
     /**
@@ -105,7 +110,37 @@ class TeamListController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate(request(),[
+            'team_name'=>'required',
+            'member.0'=>'required',
+            'roll_num.0'=>'required', 
+            'department.0'=>'required', 
+        ]); 
+        try{ 
+            $Teamname=Teamname::findorfail($id); 
+            $Teamname->team_name=request('team_name');
+            $Teamname->save();
+
+            foreach (request('member') as $key => $value) {
+                if (!empty(request('member')[$key]) && !empty(request('roll_num')[$key])) {
+                    if(isset(request('TeamDetailId')[$key])){
+                        $Team = Team::findorfail(request('TeamDetailId')[$key]);
+                    }else{
+                        $Team = new Team;
+                    }
+                    $Team->team_id = $Teamname->id;
+                    $Team->member_name = request('member')[$key];
+                    $Team->roll_num = request('roll_num')[$key];
+                    $Team->department = request('department')[$key];
+                    $Team->year = request('year')[$key];
+                    $Team->save();
+
+                }
+            }
+            return back()->with('success',['Team','Added Successfully!']);
+        }catch (Exception $e){
+            return back()->with('danger','Something went wrong!');
+        }
     }
 
     /**

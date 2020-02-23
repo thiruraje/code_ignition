@@ -8,20 +8,20 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{ url('img/favicon.png') }}" rel="icon">
+  <link href="{{ url('img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ url('lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/venobox/venobox.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="{{ url('lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+  <link href="{{ url('lib/animate/animate.min.css') }}" rel="stylesheet">
+  <link href="{{ url('lib/venobox/venobox.css') }}" rel="stylesheet">
+  <link href="{{ url('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
@@ -111,21 +111,21 @@
     </div>
 </div>
 
-     <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/venobox/venobox.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+     <script src="{{ url('lib/jquery/jquery.min.js') }}"></script>
+  <script src="{{ url('lib/jquery/jquery-migrate.min.js') }}"></script>
+  <script src="{{ url('lib/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url('lib/easing/easing.min.js') }}"></script>
+  <script src="{{ url('lib/superfish/hoverIntent.js') }}"></script>
+  <script src="{{ url('lib/superfish/superfish.min.js') }}"></script>
+  <script src="{{ url('lib/wow/wow.min.js') }}"></script>
+  <script src="{{ url('lib/venobox/venobox.min.js') }}"></script>
+  <script src="{{ url('lib/owlcarousel/owl.carousel.min.js') }}"></script>
 
   <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+  <script src="{{ url('contactform/contactform.js') }}"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+  <script src="{{ url('js/main.js') }}"></script>
 
 
   <style type="text/css">
@@ -140,7 +140,7 @@
 }
 .bg-image {
   /* The image used */
-  background-image: url("img/intro-bg.jpg");
+  background-image: url("{{ url('img/intro-bg.jpg') }}");
   
   /* Add the blur effect */
   filter: blur(3px);

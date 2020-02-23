@@ -11,7 +11,17 @@
 |
 */
 
-Route::resource('/', 'ParticipantController\TeamController');
+Route::resource('/user-register', 'ParticipantController\TeamController');
+Route::get('/', function () {
+    return view('user-register');
+});
+
+
+
+// Route::get('/home', function () {
+//     return view('home');
+// });
+
 
 
 Route::group(['prefix' => 'admin'], function () {
@@ -19,8 +29,8 @@ Route::group(['prefix' => 'admin'], function () {
   Route::post('/login', 'AdminAuth\LoginController@login');
   Route::post('/logout', 'AdminAuth\LoginController@logout')->name('logout');
 
-  Route::get('/register', 'AdminAuth\RegisterController@showRegistrationForm')->name('register');
-  Route::post('/register', 'AdminAuth\RegisterController@register');
+  // Route::get('/register', 'AdminAuth\RegisterController@showRegistrationForm')->name('register');
+  // Route::post('/register', 'AdminAuth\RegisterController@register');
 
   Route::post('/password/email', 'AdminAuth\ForgotPasswordController@sendResetLinkEmail')->name('password.request');
   Route::post('/password/reset', 'AdminAuth\ResetPasswordController@reset')->name('password.email');
