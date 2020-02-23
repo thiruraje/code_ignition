@@ -24,6 +24,7 @@
                     <thead>
                         <tr>
                             <th>team_name</th>
+                            <th>team_name</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -43,6 +44,7 @@
         ajax: '{{ action('AdminController\TeamListController@index') }}',
         "columns": [
             {data: 'team_name', name: 'team_name'},
+            {data: 'team_leader', name: 'team_leader'},
             {data: 'action', name: 'action'}
         ]
     });
