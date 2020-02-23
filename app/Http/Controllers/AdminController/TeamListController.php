@@ -23,7 +23,7 @@ class TeamListController extends Controller
               ->addColumn('action',
                     '<a href="{{ action(\'AdminController\TeamListController@show\',[$id]) }}" class="btn btn-md"><i class="fa fa-eye"></i></a>
                     <a href="{{ action(\'AdminController\TeamListController@edit\',[$id]) }}" class="btn btn-md" ><i class="fa fa-edit"></i></a>
-                    <a href="{{ action(\'AdminController\TeamListController@destroy\',[$id]) }}" class="btn btn-md Delete" data-toggle="tooltip" data-placement="right" DeleteMessage="Delete Vehicle"><i class="fa fa-trash"></i></i></a>
+                    <a href="{{ action(\'AdminController\TeamListController@destroy\',[$id]) }}" class="btn btn-md Delete" data-toggle="tooltip" data-placement="right" DeleteMessage="Delete Team"><i class="fa fa-trash"></i></i></a>
                     <a href="" class="btn btn-primary" data-toggle="tooltip" >Add</a>'
                 )
                 ->rawColumns(['action'])->make(true);
@@ -116,6 +116,12 @@ class TeamListController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try {
+            Teamname::findorfail($id)->delete();
+            Team::where([['team_id',$id]])->delete();
+            return $output = ['status' => 'success','msg' => 'Team Deleted Successfully'];
+        }catch (\Exception $e){
+            return back()->with('sorry','Sorry,Something went wrong!');
+        }
     }
 }

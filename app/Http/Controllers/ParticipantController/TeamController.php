@@ -4,6 +4,8 @@ namespace App\Http\Controllers\ParticipantController;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Team;
+use App\Teamname;
 
 class TeamController extends Controller
 {
@@ -22,7 +24,7 @@ class TeamController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create(){
-        //
+        return view('create');
     }
 
     /**
@@ -33,7 +35,32 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         $this->validate(request(),[
+            'team_name'=>'required',
+            'member.0'=>'required',
+            'roll_num.0'=>'required', 
+            'department.0'=>'required', 
+        ]); 
+        try{ 
+            $Teamname=new Teamname; 
+            $Teamname->team_name=request('team_name');
+            $Teamname->save();
+
+            foreach (request('member') as $key => $value) {
+                if (!empty(request('member')[$key]) && !empty(request('roll_num')[$key])) {
+                    $Team = new Team;
+                    $Team->team_id = $Teamname->id;
+                    $Team->member_name = request('member')[$key];
+                    $Team->roll_num = request('roll_num')[$key];
+                    $Team->department = request('department')[$key];
+                    $Team->year = request('year')[$key];
+                    $Team->save();
+                }
+            }
+            return back()->with('success',['Team','Added Successfully!']);
+        }catch (Exception $e){
+            return back()->with('danger','Something went wrong!');
+        }
     }
 
     /**

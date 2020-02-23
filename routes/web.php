@@ -11,17 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
-
-// Route::get('/home', function () {
-//     return view('home');
-// });
-
-Route::resource('/home', 'ParticipantController\TeamController');
+Route::resource('/', 'ParticipantController\TeamController');
 
 
 Route::group(['prefix' => 'admin'], function () {

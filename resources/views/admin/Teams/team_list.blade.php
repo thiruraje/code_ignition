@@ -47,37 +47,35 @@
         ]
     });
 
-
-
-    // $('#teams').on('click', '.Delete', function (e) { 
-    //     e.preventDefault();
-    //     var url = $(this).attr('href');
-    //     var DeleteMessage = $(this).attr('DeleteMessage');
-    //     swal({
-    //         title: "Are you sure?",
-    //         text: DeleteMessage,
-    //         type: "warning",
-    //         showCancelButton: true,
-    //         confirmButtonClass: "btn-danger",
-    //         confirmButtonText: "Yes, delete it!",
-    //         cancelButtonText: "No, cancel!",
-    //         closeOnConfirm: false,
-    //         closeOnCancel: false
-    //     },function(isConfirm) {
-    //         if (isConfirm) {
-    //             $.ajax(
-    //                 {headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-    //                 url: url,
-    //                 type: 'DELETE',
-    //                 dataType: 'json',
-    //             }).always(function (data) {
-    //                 teams.ajax.reload();
-    //                 swal("Deleted!", data.msg, data.status);
-    //             });
-    //         } else {
-    //             swal("Cancelled", "Your Data is safe", "error");
-    //         }
-    //     });
-    // });
+    $('#teams').on('click', '.Delete', function (e) { 
+        e.preventDefault();
+        var url = $(this).attr('href');
+        var DeleteMessage = $(this).attr('DeleteMessage');
+        swal({
+            title: "Are you sure?",
+            text: DeleteMessage,
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonClass: "btn-danger",
+            confirmButtonText: "Yes, delete it!",
+            cancelButtonText: "No, cancel!",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        },function(isConfirm) {
+            if (isConfirm) {
+                $.ajax(
+                    {headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                    url: url,
+                    type: 'DELETE',
+                    dataType: 'json',
+                }).always(function (data) {
+                    teams.ajax.reload();
+                    swal("Deleted!", data.msg, data.status);
+                });
+            } else {
+                swal("Cancelled", "Your Data is safe", "error");
+            }
+        });
+    });
 </script>        
 @endsection
