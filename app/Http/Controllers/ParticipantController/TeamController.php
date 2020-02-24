@@ -34,11 +34,7 @@ class TeamController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        
-
-
+    public function store(Request $request){
        $FormFullValidationArray = array(
             'team_name'=>'required',
             'member.0'=>'required',
