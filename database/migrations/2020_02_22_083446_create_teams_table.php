@@ -17,11 +17,11 @@ class CreateTeamsTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('team_id')->unsigned();
             $table->foreign('team_id')->references('id')->on('teamnames');
-            $table->string('member_name');
-            $table->string('roll_num');
-            $table->string('email')->unique();
-            $table->string('department');
-            $table->string('year');
+            $table->string('member_name')->nullable();
+            $table->string('roll_num')->nullable();
+            $table->string('email')->nullable();
+            $table->string('department')->nullable();
+            $table->string('year')->nullable();
             $table->timestamps();
         });
     }
