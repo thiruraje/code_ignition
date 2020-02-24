@@ -41,7 +41,6 @@
         <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
         <a href="#intro" class="scrollto"><img src="{{url('img/lo.png')}}" width="150px" height="180px" alt="" title=""></a>
       </div>
-
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="#intro">Home</a></li>
@@ -49,11 +48,8 @@
           <li><a href="#speakers">Speaker</a></li>
           <li><a href="#schedule">Schedule</a></li>
           <li><a href="#venue">Venue</a></li>
-           <li><a href="#gallery">Gallery</a></li>
-          
           <li><a href="#supporters">Sponsors</a></li>
           <li><a href="#contact">Contact</a></li>
-          
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -67,7 +63,7 @@
       <h1 class="mb-4 pb-0">Welcome <br>to<br><span>Code Ignition</span> </h1>
       <p class="mb-4 pb-0" style="font-family: sans-serif;">Feb 28, Common Computing Lab, 3rd Floor</p>
       <br>
-      <a href="#about" class="about-btn scrollto">About of Code Ignition</a>
+      <a href="#about" class="about-btn scrollto">About Code Ignition</a>
       <a href="{{ action('ParticipantController\TeamController@create') }}" class="about-btn scrollto"  data-target="#buy-ticket-modal" data-ticket-type="standard-access">Register</a>
     </div>
   </section>
@@ -83,7 +79,7 @@
           <div class="col-lg-6">
             <h2>About of Code Ignition</h2>
             <p>Code Ignition is an event where you can showcase your skills and compete with others to find the best.<br>It is not just about the competitions and also an event where you can learn more and gain knowledge , also be an inspired.</p>
-            <p>Code Ignition has multiple rounds.<br># PUZZLE<br># Fully Technical(Problem Solving and Solution Finding)<br>#</p>
+            <p>Code Ignition has multiple rounds.<br># PUZZLE<br># Problem Solving and Solution Finding<br># Code Sense</p>
           </div>
           <div class="col-lg-3">
             <h3>Where</h3>
@@ -91,122 +87,22 @@
           </div>
           <div class="col-lg-3">
             <h3>When</h3>
-            <p>Feb 28 - 2K2K<br>Friday</p>
+            <p>Feb 28 - 2K20<br>Friday</p>
           </div>
         </div>
       </div>
     </section>
-
 <div id="buy-ticket-modal" class="modal fade">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Register</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-<div class="modal-body">
-  <form method="POST" action="#">
-  
-      <div class="form-group">
-        <input type="text" class="form-control" name="team-name" placeholder="Team Name *">
-      </div>
-  
-        <div class="form-group">
-            <input type="text" class="form-control" name="head-name" placeholder="Team Head Name *">
-          </div>
-        
-          <div class="form-group">
-            <select id="ticket-type" name="ticket-type" class="form-control" >
-              <option value="standard-access">CSE</option>
-              <option value="standard-access-1">ECE</option>
-              <option value="pro-access">Mech</option>
-              <option value="premium-access">Agri</option>
-              <option value="premium-access-1">Civil</option>
-            </select>
-          </div>
-        
-          <div class="form-group">
-            <select id="ticket-type" name="ticket-type" class="form-control" >
-              <option value="standard-access">1st Year</option>
-              <option value="standard-access-1">2nd Year</option>
-              <option value="pro-access">3rd Year</option>
-              
-            </select>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" name="first-name" placeholder="First  Team Member Name*">
-          </div>
-          <div class="form-group">
-            <select id="ticket-type" name="ticket-type" class="form-control" >
-              <option value="standard-access">CSE</option>
-              <option value="standard-access-1">ECE</option>
-              <option value="pro-access">Mech</option>
-              <option value="premium-access">Agri</option>
-              <option value="premium-access-1">Civil</option>
-            </select>
-          </div>
-        
-          <div class="form-group">
-            <select id="ticket-type" name="ticket-type" class="form-control" >
-              <option value="standard-access">1st Year</option>
-              <option value="standard-access-1">2nd Year</option>
-              <option value="pro-access">3rd Year</option>
-              
-            </select>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" name="second-name" placeholder="Second  Team Member Name*">
-          </div>
-          <div class="form-group">
-            <select id="ticket-type" name="ticket-type" class="form-control" >
-              <option value="standard-access">CSE</option>
-              <option value="standard-access-1">ECE</option>
-              <option value="pro-access">Mech</option>
-              <option value="premium-access">Agri</option>
-              <option value="premium-access-1">Civil</option>
-            </select>
-          </div>
-        
-          <div class="form-group">
-            <select id="ticket-type" name="ticket-type" class="form-control" >
-              <option value="standard-access">1st Year</option>
-              <option value="standard-access-1">2nd Year</option>
-              <option value="pro-access">3rd Year</option>
-              
-            </select>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" name="thired-email" placeholder="Thired  Team Member Name *">
-          </div>
-
-          <div class="form-group">
-            <select id="ticket-type" name="ticket-type" class="form-control" >
-              <option value="standard-access">CSE</option>
-              <option value="standard-access-1">ECE</option>
-              <option value="pro-access">Mech</option>
-              <option value="premium-access">Agri</option>
-              <option value="premium-access-1">Civil</option>
-            </select>
-          </div>
-        
-          <div class="form-group">
-            <select id="ticket-type" name="ticket-type" class="form-control" >
-              <option value="standard-access">1st Year</option>
-              <option value="standard-access-1">2nd Year</option>
-              <option value="pro-access">3rd Year</option>
-              
-            </select>
-          </div>
-          <div class="text-center">
-            <button type="submit" class="btn">Register</button>
-          </div>
-        </form>
-      </div>
-     </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Register</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+    </div>
+  </div>
 </div>
 </form></div></div>
     
@@ -216,10 +112,12 @@
           <h2>Event Speaker</h2>
           <p>Successful Entrepreneur</p>
         </div>
-	      <div class="col 5 text-center">
+        <div class="col 5 text-center">
 	            <div class="speaker">
 	          <img class="  img-fluid" src="img/kishore_fintech.jpeg" style=" border-radius: 70%;" width="350" alt=""/>
           	</div>
+        <h2>Mr.Kishorekumar Chandrasekaran </h2><br>
+
 	      <div class="social">
                   <a href="https://fintechgie.com/"><i class="fa fa-internet-explorer"></i></a>&nbsp;&nbsp;
                   <a href="https://facebook.com/fintechgie/"><i class="fa fa-facebook"></i></a>&nbsp;&nbsp;
@@ -239,13 +137,13 @@
 
         <ul class="nav nav-tabs" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" href="#day-1" role="tab" data-toggle="tab">Round 1</a>
+            <a class="nav-link active" href="#day-1" role="tab" style="width: 20;" data-toggle="tab">Inauguration</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#day-2" role="tab" data-toggle="tab">Round 2</a>
+            <a class="nav-link" href="#day-2" role="tab" data-toggle="tab">Round 1</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#day-3" role="tab" data-toggle="tab">Round 3</a>
+            <a class="nav-link" href="#day-3" role="tab" data-toggle="tab">Round 2 & 3</a>
           </li>
         </ul>
 
@@ -255,80 +153,41 @@
 
           <!-- Schdule Day 1 -->
           <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
-
             <div class="row schedule-item">
-              <div class="col-md-2"><time>09:30 AM</time></div>
-              <div class="col-md-10">
-                <h4>Registration</h4>
-                <p>Fugit voluptas iusto maiores temporibus autem numquam magnam.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>10:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="{{url('img/speakers/1.jpg')}}" alt="Brenden Legros">
+                <div class="col-md-2"><time>09:30 AM</time></div>
+                <div class="col-md-10">
+                  <h4>Inauguration Start</h4>
                 </div>
-                <h4>Keynote <span>Brenden Legros</span></h4>
-                <p>Facere provident incidunt quos voluptas.</p>
               </div>
-            </div>
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>11:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="{{url('img/speakers/2.jpg')}}" alt="Hubert Hirthe">
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>9:45 AM</time></div>
+                <div class="col-md-10">
+                  <h4>Wellcome Address</h4>
                 </div>
-                <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
-                <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
               </div>
-            </div>
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>12:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="{{url('img/speakers/3.jpg')}}" alt="Cole Emmerich">
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>10:00 AM</time></div>
+                <div class="col-md-10">
+                  <h4>Presidential Address</h4>
                 </div>
-                <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
-                <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
               </div>
-            </div>
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>02:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="{{url('img/speakers/4.jpg')}}" alt="Jack Christiansen">
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>10:15 AM</time></div>
+                <div class="col-md-10">
+                  <h4>Introduction of Chief Guests</h4>
                 </div>
-                <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
-                <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
               </div>
-            </div>
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>03:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="{{url('img/speakers/5.jpg')}}" alt="Alejandrin Littel">
+              <div class="row schedule-item">
+                <div class="col-md-2"><time>10:30 PM</time></div>
+                <div class="col-md-10">
+                  <h4>Address by the Chief Guests</h4>
+                  <p>Mr.Kishorekumar Chandrasekaran</p>
                 </div>
-                <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
-                <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
               </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>04:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="{{url('img/speakers/6.jpg')}}" alt="Willow Trantow">
-                </div>
-                <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
-                <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
-              </div>
-            </div>
 
           </div>
           <!-- End Schdule Day 1 -->
@@ -337,68 +196,19 @@
           <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>10:00 AM</time></div>
+              <div class="col-md-2"><time>10:45 AM to 11:00</time></div>
               <div class="col-md-10">
-                <div class="speaker">
-                  <img src="{{url('img/speakers/1.jpg')}}" alt="Brenden Legros">
-                </div>
-                <h4>Libero corrupti explicabo itaque. <span>Brenden Legros</span></h4>
-                <p>Facere provident incidunt quos voluptas.</p>
+                <h4>Tea Break</h4>
               </div>
             </div>
 
             <div class="row schedule-item">
               <div class="col-md-2"><time>11:00 AM</time></div>
               <div class="col-md-10">
-                <div class="speaker">
-                  <img src="{{url('img/speakers/2.jpg')}}" alt="Hubert Hirthe">
-                </div>
-                <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
-                <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>12:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="{{url('img/speakers/3.jpg')}}" alt="Cole Emmerich">
-                </div>
-                <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
-                <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>02:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="{{url('img/speakers/4.jpg')}}" alt="Jack Christiansen">
-                </div>
-                <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
-                <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>03:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="{{url('img/speakers/5.jpg')}}" alt="Alejandrin Littel">
-                </div>
-                <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
-                <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>04:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="{{url('img/speakers/6.jpg')}}" alt="Willow Trantow">
-                </div>
-                <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
-                <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
+                
+                <h4>Puzzle</h4>
+                <p>To arrange the jumbled code lines into correct format and get the output.</p>
+                <p>10-buzzle with 15 mins.</p>
               </div>
             </div>
 
@@ -409,80 +219,47 @@
           <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>10:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="{{url('img/speakers/2.jpg')}}" alt="Hubert Hirthe">
-                </div>
-                <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
-                <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>11:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="{{url('img/speakers/3.jpg')}}" alt="Cole Emmerich">
-                </div>
-                <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
-                <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
               <div class="col-md-2"><time>12:00 AM</time></div>
               <div class="col-md-10">
-                <div class="speaker">
-                  <img src="{{url('img/speakers/1.jpg')}}" alt="Brenden Legros">
-                </div>
-                <h4>Libero corrupti explicabo itaque. <span>Brenden Legros</span></h4>
-                <p>Facere provident incidunt quos voluptas.</p>
+                <h4>Round 2</h4><br>
+                <h5>Problem sloving and solution finding</h5>
+                <p>To find tha logical output on particular problem.</p>
               </div>
             </div>
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>02:00 PM</time></div>
+              <div class="col-md-2"><time>1:00 PM to 2:00 PM</time></div>
               <div class="col-md-10">
-                <div class="speaker">
-                  <img src="{{url('img/speakers/4.jpg')}}" alt="Jack Christiansen">
-                </div>
-                <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
-                <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
+                
+                <h4>Lunch Break</h4>
               </div>
             </div>
-
             <div class="row schedule-item">
-              <div class="col-md-2"><time>03:00 PM</time></div>
+              <div class="col-md-2"><time>2:00 PM</time></div>
               <div class="col-md-10">
-                <div class="speaker">
-                  <img src="{{url('img/speakers/5.jpg')}}" alt="Alejandrin Littel">
-                </div>
-                <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
-                <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
+                <h5>Round 3</h5>
+                <h4>Code Sense</h4>
+                <p>To submit or given to the idea's for real world problems.</p>
               </div>
             </div>
-
             <div class="row schedule-item">
-              <div class="col-md-2"><time>04:00 PM</time></div>
+              <div class="col-md-2"><time>4:00 PM</time></div>
               <div class="col-md-10">
-                <div class="speaker">
-                  <img src="{{url('img/speakers/6.jpg')}}" alt="Willow Trantow">
-                </div>
-                <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
-                <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
+                <h4>Price Distribution.</h4>
               </div>
             </div>
-
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>4:30 PM</time></div>
+              <div class="col-md-10">
+                <h4>Event End</h4>
+                <p>National Anthem</p>
+              </div>
+            </div>
           </div>
           <!-- End Schdule Day 2 -->
-
         </div>
-
       </div>
-
     </section>
-
     <!--==========================
       Venue Section
     ============================-->
@@ -496,7 +273,6 @@
       <br><br>
       <div class="container-fluid venue-gallery-container">
         <div class="row no-gutters">
-
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
               <a href="img/venue-gallery/audi.jpg" class="venobox" data-gall="venue-gallery">
@@ -504,7 +280,6 @@
               </a>
             </div>
           </div>
-
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
               <a href="img/venue-gallery/mugh.jpg" class="venobox" data-gall="venue-gallery">
@@ -520,38 +295,17 @@
               </a>
             </div>
           </div>
-
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
               <a href="img/venue-gallery/sha.jpg" class="venobox" data-gall="venue-gallery">
                 <img src="img/venue-gallery/sha.jpg" alt="" class="img-fluid">
               </a>
             </div>
-          </div>
-
-
-          
-
+          </div>   
         </div>
       </div>
-
     </section>
-    <section id="gallery" class="wow fadeInUp">
 
-      <div class="container">
-        <div class="section-header">
-          <h2>Gallery</h2>
-          <p>Check our gallery from the events</p>
-        </div>
-      </div>
-
-      <div class="owl-carousel gallery-carousel">
-        <a href="{{url('img/gallery/compony.jpg')}}" class="venobox" data-gall="gallery-carousel"><img src="{{url('img/gallery/compony.jpg')}}" alt=""></a>
-        <a href="{{url('img/gallery/fintech_1.jpg')}}" class="venobox" data-gall="gallery-carousel"><img src="{{url('img/gallery/fintech_1.jpg')}}" alt=""></a>
-        <a href="{{url('img/gallery/gre_fin.jpg')}}" class="venobox" data-gall="gallery-carousel"><img src="{{url('img/gallery/gre_fin.jpg')}}" alt=""></a>
-      </div>
-
-    </section>
     <section id="supporters" class="section-with-bg wow fadeInUp">
 
       <div class="container">
@@ -565,15 +319,14 @@
             <div class="supporter-logo">
               <div class="form-group">
                 
-              <img src="{{url('img/supporters/greefi.png')}}" class="img-fluid"  alt=""><br>
+              <img src="{{url('img/LabelGreefi.png')}}" class="img-fluid"  alt=""><br>
               </div>
-              Greefi Technologies
             </div>
           </div>
           
           <div class="col-lg-4 col-md-4 col-xs-4">
             <div class="supporter-logo">
-              <img src="{{url('img/supporters/fintechgie.jpg')}}" class="img-fluid" alt="">
+              <img src="{{url('img/LabelFintechGie.png')}}" class="img-fluid" alt="">
             </div>
           </div>
         

@@ -138,7 +138,7 @@
     </div>
 </body>
 
-  <style type="text/css">
+<style type="text/css">
     body, html {
   height: 100%;
   margin: 0;
@@ -152,7 +152,7 @@
   background-image: url("{{ url('img/intro-bg.jpg') }}");
   height: 100%; 
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
 }
 
