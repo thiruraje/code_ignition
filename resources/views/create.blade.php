@@ -23,7 +23,7 @@
     margin-top : 4rem;
     padding : 6rem;
     background: white;
-    width: 110%;
+    width: 115%;
     height: 100%;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0.5rem 1rem 0px;

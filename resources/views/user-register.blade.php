@@ -245,8 +245,8 @@
             <div class="row schedule-item">
               <div class="col-md-2"><time>2:00 PM</time></div>
               <div class="col-md-10">
-                <h5>Round 3</h5>
-                <h4>Code Sense</h4>
+                <h4>Round 3</h4>
+                <h5>Code Sense</h5>
                 <p>It is about to take a real world problem of your own and should give the solution for that problem.</p>
               </div>
             </div>
@@ -324,30 +324,30 @@
         </div>
         <div class=container">
           <div class="row">
-              <div class="col-md-3">
+              <div class="col-md-4">
                   <div class="speaker">
-                      <img class="  img-fluid" src="img/sudhakar_greefi.jpg" style=" border-radius: 50%;" width="200" alt=""/>
+                      <img class="  img-fluid" align="center" src="img/sudhakar_greefi.jpg" style=" border-radius: 50%;" width="200" alt=""/>
                   </div><br>
-                  <h3 align="center">Mr.Sudhakar Annadurai</h3><p align="center">Greefi Technologies</p>
+                  <h3 >Mr.Sudhakar       Annadurai</h3><p align="center">Greefi Technologies</p>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-4">
                   <div class="speaker">
-                      <img class="  img-fluid" src="img/kishore_fintech.jpg" style=" border-radius: 50%;" width="400" alt=""/>
+                      <img class="  img-fluid" src="img/kishore_fintech.jpg" style=" border-radius: 50%;" width="280" alt=""/>
                   </div><br>
-                  <h3 align="center">Mr.Kishorekumar Chandrasekaran </h3><br><p align="center">FintechGie,Inc.</p>
+                  <h3 >Mr.Kishorekumar      Chandrasekaran </h3><p >FintechGie,Inc.</p>
               </div>
-               <div class="col-md-3">
+               <div class="col-md-4">
                    <div class="speaker">
                       <img class="  img-fluid" src="img/karthikeyan_skyline.jpg" style=" border-radius: 50%;" width="200" alt=""/>
                   </div><br>
-                  <h3 align="center">Mr.Karthikeyan </h3><br><p align="center">SkyLine Web Services</p>
+                  <h3 >Mr.Karthikeyan </h3><br><p >SkyLine Web Services</p>
               </div>
-               <div class="col-md-3">
+              <!--  <div class="col-md-3">
                    <div class="speaker">
                       <img class="  img-fluid" src="img/karthikeyan_skyline.jpg" style=" border-radius: 50%;" width="200" alt=""/>
                   </div><br>
                   <h3 align="center">Mr.Mohan Shanmugham </h3><p align="center">Greefi Technologies</p>
-              </div>
+              </div> -->
           </div>
         </div>
       </div>
