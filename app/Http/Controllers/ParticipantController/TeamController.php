@@ -36,13 +36,25 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
-        $FormFullValidationArray = array(
-           'team_name'=>'required',
+        
+
+
+       $FormFullValidationArray = array(
+            'team_name'=>'required',
+            'member.0'=>'required',
+            'email.0'=>'required',
+            'roll_num.0'=>'required', 
+            'department.0'=>'required', 
+            'year.0'=>'required', 
         );
-        $ValidationErrorMessage = array();
+        $ValidationErrorMessage = array( 'member.0.required'=>'First Team Member Name is Needed',
+            'roll_num.0.required'=>'First Roll Number is Needed',
+            'email.0.required'=>'First Email is Needed',
+            'department.0.required'=>'First Team Member Name is Needed',
+            'year.0.required'=>'First Team Member Name is Needed',);
         if (!empty(request('member'))) {
             foreach(request('member') as $key=>$EducationDetail) {
-                if (!empty($EducationDetail)) {
+                if (!empty($EducationDetail) && !empty(request('email')) && !empty(request('roll_num'))) {
                     $FormFullValidationArray['member.'.$key] = 'required';
                     $FormFullValidationArray['email.'.$key] = 'required|email';
                     $FormFullValidationArray['roll_num.'.$key] = 'required';
