@@ -93,7 +93,7 @@
                                             <div class="col-sm-12">
                                                 <label>Department</label>
                                                 <select  name="department[]"class="form-control">
-                                                  <option value=""></option>
+                                                  <option value="">Select Dept</option>
                                                   <option value="cse">Cse</option>
                                                   <option value="ece">Ece</option>
                                                   <option value="mech">Mech</option>
@@ -108,7 +108,7 @@
                                             <div class="col-sm-12">
                                                 <label>Year</label>
                                                 <select   name="year[]"class="form-control">
-                                                  <option value=""></option>
+                                                  <option value="">Select Year</option>
                                                   <option value="1">I st</option>
                                                   <option value="2">II nd</option>
                                                   <option value="3">III rd</option>
