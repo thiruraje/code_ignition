@@ -71,10 +71,13 @@
     <div class="intro-container wow fadeIn">
       <h1 class="mb-4 pb-0">Welcome <br>to<br><span>Code Ignition</span> </h1>
       <p class="mb-4 pb-0" >Intra College Tech Fest</p>
+      <p class="mb-4 pb-0" >Venue:</p>
       <p class="mb-4 pb-0" style="font-family: sans-serif;">Feb 28  Friday, Common Computing Lab, 3rd Floor</p>
       <br>
       <a href="#about" class="about-btn scrollto">About Code Ignition</a>
-      <a href="{{ action('ParticipantController\TeamController@create') }}" class="about-btn scrollto"  data-target="#buy-ticket-modal" data-ticket-type="standard-access">Register</a>
+      <a href="{{ action('ParticipantController\TeamController@create') }}" class="about-btn scrollto"  data-target="#buy-ticket-modal" data-ticket-type="standard-access">Register</a><br>
+       <p class="mb-2 pb-0" >Warmly Welcome all department Students and Staff</p>
+
     </div>
   </section>
 
@@ -89,7 +92,7 @@
           <div class="col-lg-6">
             <h2>About of Code Ignition</h2>
             <p>Code Ignition is an event where you can showcase your skills and compete with others to find the best.<br>It is not just about the competitions and also an event where you can learn more and gain knowledge , also be an inspired.</p>
-            <p>Code Ignition has multiple rounds.<br># PUZZLE<br># Problem Solving and Solution Finding<br># Code Sense</p>
+            <p>Code Ignition has multiple rounds.<br># PUZZLE<br># Problem Solving and Solution Finding<br># Creative Knowledge</p>
           </div>
           <div class="col-lg-3">
             <h3>Where</h3>
@@ -120,7 +123,7 @@
       <div class="container">
         <div class="section-header">
           <h2>Event Speaker</h2>
-          <p>Successful Entrepreneur</p>
+          <p>Entrepreneur, Independent Writer & Youtuber</p>
         </div>
         <div class="col 5 text-center">
 	            <div class="speaker">
@@ -171,7 +174,7 @@
               <div class="row schedule-item">
                 <div class="col-md-2"><time>9:45 AM</time></div>
                 <div class="col-md-10">
-                  <h4>Wellcome Address</h4>
+                  <h4>Welcome Address</h4>
                 </div>
               </div>
 
@@ -192,7 +195,7 @@
               <div class="row schedule-item">
                 <div class="col-md-2"><time>10:30 AM</time></div>
                 <div class="col-md-10">
-                  <h4>Address by the Chief Guests</h4>
+                  <h4>Address by the Cheif Guest</h4>
                   <p>Mr.Kishorekumar Chandrasekaran</p>
                 </div>
               </div>
@@ -215,7 +218,7 @@
               <div class="col-md-10">
                 
                 <h4>Puzzle</h4>
-                <p>To arrange the jumbled code lines into correct format and get the output.</p>
+                <p>Arrang e jumbled code into Executable.</p>
                 <p>10-puzzle with 15 mins.</p>
               </div>
             </div>
@@ -230,8 +233,8 @@
               <div class="col-md-2"><time>12:00 PM</time></div>
               <div class="col-md-10">
                 <h4>Round 2</h4><br>
-                <h5>Problem sloving and solution finding</h5>
-                <p>To find tha logical output on particular problem.</p>
+                <h5>Problem Hustling</h5>
+                <p>You have to find or hustle real world problem whether technical or Environment you've to be give better Solution with Logical Idea's.</p>
               </div>
             </div>
 
@@ -246,7 +249,7 @@
               <div class="col-md-2"><time>2:00 PM</time></div>
               <div class="col-md-10">
                 <h4>Round 3</h4>
-                <h5>Code Sense</h5>
+                <h5>Creative Knowledge</h5>
                 <p>It is about to take a real world problem of your own and should give the solution for that problem.</p>
               </div>
             </div>
@@ -324,30 +327,31 @@
         </div>
         <div class=container">
           <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-3">
                   <div class="speaker">
                       <img class="  img-fluid" align="center" src="img/sudhakar_greefi.jpg" style=" border-radius: 50%;" width="200" alt=""/>
                   </div><br>
                   <h3 >Mr.Sudhakar       Annadurai</h3><p align="center">Greefi Technologies</p>
               </div>
-              <div class="col-md-4">
+             
+               <div class="col-md-3">
+                   <div class="speaker">
+                      <img class="  img-fluid" src="img/karthikeyan_skyline.jpg" style=" border-radius: 50%;" width="200" alt=""/>
+                  </div><br>
+                  <h3 >Mr.Karthikeyan T </h3><br><p >SkyLine Web Services</p>
+              </div>
+               <div class="col-md-3">
+                   <div class="speaker">
+                      <img class="  img-fluid" src="img/mohan_greefi.jpg" style=" border-radius: 50%;" width="200" alt=""/>
+                  </div><br>
+                  <h3 align="center">Mr.Mohan Shanmugham </h3><p align="center">Greefi Technologies</p>
+              </div>
+               <div class="col-md-3">
                   <div class="speaker">
-                      <img class="  img-fluid" src="img/kishore_fintech.jpg" style=" border-radius: 50%;" width="280" alt=""/>
+                      <img class="  img-fluid" src="img/fintech_kishore.jpg" style=" border-radius: 50%;" width="200" alt=""/>
                   </div><br>
                   <h3 >Mr.Kishorekumar      Chandrasekaran </h3><p >FintechGie,Inc.</p>
               </div>
-               <div class="col-md-4">
-                   <div class="speaker">
-                      <img class="  img-fluid" src="img/karthikeyan_skyline.jpg" style=" border-radius: 50%;" width="200" alt=""/>
-                  </div><br>
-                  <h3 >Mr.Karthikeyan </h3><br><p >SkyLine Web Services</p>
-              </div>
-              <!--  <div class="col-md-3">
-                   <div class="speaker">
-                      <img class="  img-fluid" src="img/karthikeyan_skyline.jpg" style=" border-radius: 50%;" width="200" alt=""/>
-                  </div><br>
-                  <h3 align="center">Mr.Mohan Shanmugham </h3><p align="center">Greefi Technologies</p>
-              </div> -->
           </div>
         </div>
       </div>
@@ -371,15 +375,16 @@
             </div>
           </div>
           
-          <div class="col-lg-4 col-md-4 col-xs-4">
-            <div class="supporter-logo">
-              <img src="{{url('img/LabelFintechGie.png')}}" class="img-fluid" alt="">
-            </div>
-          </div>
+         
         
           <div class="col-lg-4 col-md-4 col-xs-4">
             <div class="supporter-logo">
               <img src="{{url('img/supporters/skyline_1.jpeg')}}" class="img-fluid" alt="">
+            </div>
+          </div>
+           <div class="col-lg-4 col-md-4 col-xs-4">
+            <div class="supporter-logo">
+              <img src="{{url('img/LabelFintechGie.png')}}" class="img-fluid" alt="">
             </div>
           </div>
         </div>
