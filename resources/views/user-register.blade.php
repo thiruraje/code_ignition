@@ -340,12 +340,6 @@
                   <h3 >Mr.Karthikeyan T </h3><br><p >SkyLine Web Services</p>
               </div>
                <div class="col-md-3">
-                   <div class="speaker">
-                      <img class="  img-fluid" src="img/mohan_greefi.jpg" style=" border-radius: 50%;" width="200" alt=""/>
-                  </div><br>
-                  <h3 align="center">Mr.Mohan Shanmugham </h3><p align="center">Greefi Technologies</p>
-              </div>
-               <div class="col-md-3">
                   <div class="speaker">
                       <img class="  img-fluid" src="img/fintech_kishore.jpg" style=" border-radius: 50%;" width="200" alt=""/>
                   </div><br>
