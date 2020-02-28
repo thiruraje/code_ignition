@@ -73,9 +73,8 @@
       <p class="mb-4 pb-0" >Intra College Tech Fest</p>
       <p class="mb-4 pb-0" >Venue:</p>
       <p class="mb-4 pb-0" style="font-family: sans-serif;">Feb 28  Friday, Common Computing Lab, 3rd Floor</p>
-      <br>
       <a href="#about" class="about-btn scrollto">About Code Ignition</a>
-      <a href="{{ action('ParticipantController\TeamController@create') }}" class="about-btn scrollto"  data-target="#buy-ticket-modal" data-ticket-type="standard-access">Register</a><br>
+      <a href="{{ action('ParticipantController\TeamController@create') }}" class="about-btn scrollto"  data-target="#buy-ticket-modal" data-ticket-type="standard-access">Register</a>
        <p class="mb-2 pb-0" >Warmly Welcome all department Students and Staff</p>
 
     </div>
@@ -90,7 +89,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <h2>About of Code Ignition</h2>
+            <h2>About Code Ignition</h2>
             <p>Code Ignition is an event where you can showcase your skills and compete with others to find the best.<br>It is not just about the competitions and also an event where you can learn more and gain knowledge , also be an inspired.</p>
             <p>Code Ignition has multiple rounds.<br># PUZZLE<br># Problem Solving and Solution Finding<br># Creative Knowledge</p>
           </div>
@@ -234,7 +233,7 @@
               <div class="col-md-10">
                 <h4>Round 2</h4><br>
                 <h5>Problem Hustling</h5>
-                <p>You have to find or hustle real world problem whether technical or Environment you've to be give better Solution with Logical Idea's.</p>
+                <p>You have to find or hustle the better Solution with Logical Idea's for given problem's.</p>
               </div>
             </div>
 
@@ -250,7 +249,7 @@
               <div class="col-md-10">
                 <h4>Round 3</h4>
                 <h5>Creative Knowledge</h5>
-                <p>It is about to take a real world problem of your own and should give the solution for that problem.</p>
+                <p>Technical connection & Technical Quiz</p>
               </div>
             </div>
             <div class="row schedule-item">
